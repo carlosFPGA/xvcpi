@@ -89,8 +89,6 @@ open_hw_target -xvc_url <xvcpi-server>:2542
 
 Full instructions can be found in [ProdDoc_XVC_2014 3](ProdDoc_XVC_2014_3.pdf).
 
-# Snickerdoodle
-The initial purpose of **xvcpi** was to provide a simple means of programming the [Snickerdoodle](http://snickerdoodle.io).
 # Licensing
 This work, "xvcpi.c", is a derivative of "xvcServer.c" (https://github.com/Xilinx/XilinxVirtualCable)
 
@@ -102,7 +100,11 @@ by tmbinc, used under CC0 1.0 Universal (http://creativecommons.org/publicdomain
 
 Portions of "xvcpi.c" are derived from OpenOCD (http://openocd.org), (https://github.com/arduino/OpenOCD/blob/master/src/jtag/drivers/bcm2835gpio.c)
 
-Documentation GPIO:
+"xvcpi.c" is licensed under CC0 1.0 Universal (http://creativecommons.org/publicdomain/zero/1.0/)
+by Derek Mulcahy.
+
+
+#Documentation about GPIO:
 
 [Low Level Programming of the Raspberry Pi in C](http://www.pieter-jan.com/node/15) From there: "Physical addresses range from 0x20000000 to 0x20FFFFFF for peripherals. The bus addresses for peripherals are set up to map onto the peripheral bus address range starting at 0x7E000000. Thus a peripheral advertised here at bus address 0x7Ennnnnn is available at physical address 0x20nnnnnn." And explication for macros. Complete.
 
@@ -146,6 +148,3 @@ else if (strcmp(hardware, "BCM2709") == 0 || strcmp(hardware, "BCM2836") == 0) {
                 found = 1;
 
 ```
-
-"xvcpi.c" is licensed under CC0 1.0 Universal (http://creativecommons.org/publicdomain/zero/1.0/)
-by Derek Mulcahy.
