@@ -26,7 +26,8 @@
 #define ERROR_JTAG_INIT_FAILED -1
 #define ERROR_OK 1
 
-uint32_t bcm2835_peri_base = 0x20000000;
+uint32_t bcm2835_peri_base = 0x3f000000; /*Change for use on RPi 2 and RPi 3. Old in RPi1 was 0x20000000;*/
+	
 #define BCM2835_GPIO_BASE	(bcm2835_peri_base + 0x200000) /* GPIO controller */
 
 #define BCM2835_PADS_GPIO_0_27		(bcm2835_peri_base + 0x100000)
@@ -55,10 +56,10 @@ static int bcm2835gpio_init(void);
 static int bcm2835gpio_quit(void);
 
 /* GPIO numbers for each signal. Negative values are invalid */
-static int tck_gpio = 11;
-static int tms_gpio = 25;
-static int tdi_gpio = 10;
-static int tdo_gpio = 9;
+static int tck_gpio = 27;
+static int tms_gpio = 22;
+static int tdi_gpio = 17;
+static int tdo_gpio = 23;
 
 /* Transition delay coefficients */
 static unsigned int jtag_delay = 50;
